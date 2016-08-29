@@ -1,6 +1,10 @@
 {
   "name": "PaginationExample",
-  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kurounin/PaginationExample"
+  },
   "scripts": {
     "start": "meteor run"
   },
