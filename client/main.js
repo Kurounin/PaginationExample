@@ -5,6 +5,9 @@ import './main.html';
 
 Template.hello.onCreated(function helloOnCreated() {
     this.pagination = new Meteor.Pagination(MyCollection, {
+        filters: {
+            idx: {$gt: 9}
+        },
         sort: {
             title: 1
         }
