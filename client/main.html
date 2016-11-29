@@ -11,12 +11,16 @@
 
 <template name="hello">
     <div>
-        <ul>
-          {{#each documents}}
-              <li>Document #{{_id}}: {{title}}</li>
-          {{/each}}
-        </ul>
-        {{> defaultBootstrapPaginator pagination=templatePagination limit=10 containerClass="text-left" onClick=clickEvent}}
+        {{#if isReady}}
+            <ul>
+              {{#each documents}}
+                  <li>Document #{{_id}}: {{title}}</li>
+              {{/each}}
+            </ul>
+            {{> defaultBootstrapPaginator pagination=templatePagination limit=10 containerClass="text-left" onClick=clickEvent}}
+        {{else}}
+            Loading...
+        {{/if}}
     </div>
 </template>
 

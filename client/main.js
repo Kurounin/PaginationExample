@@ -10,11 +10,15 @@ Template.hello.onCreated(function helloOnCreated() {
         },
         sort: {
             title: 1
-        }
+        },
+		debug: true
     });
 });
 
 Template.hello.helpers({
+    isReady: function () {
+        return Template.instance().pagination.ready();
+    },
     templatePagination: function () {
         return Template.instance().pagination;
     },
