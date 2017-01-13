@@ -5,11 +5,18 @@
 <body>
   <h1>Welcome to Meteor Pagination Example!</h1>
 
-  {{> hello}}
-  {{> info}}
+  {{> main}}
 </body>
 
-<template name="hello">
+<template name="main">
+    <ul class="nav nav-tabs">
+        <li role="presentation" data-id="home" class="templateTab {{getActiveClass "home"}}"><a href="#">Home</a></li>
+        <li role="presentation" data-id="info" class="templateTab {{getActiveClass "info"}}"><a href="#">Info</a></li>
+    </ul>
+    {{> Template.dynamic template=getCurrentTemplate }}
+</template>
+
+<template name="home">
     <div>
         {{#if isReady}}
             <ul>
