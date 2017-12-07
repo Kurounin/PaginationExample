@@ -24,7 +24,7 @@
                   <li>Document #{{_id}}: {{title}}</li>
               {{/each}}
             </ul>
-            {{> defaultBootstrapPaginator pagination=templatePagination limit=10 containerClass="text-left" onClick=clickEvent}}
+            {{> defaultBootstrapPaginator pagination=templatePagination limit=10 paginationClass="ui pagination menu" itemClass="item" wrapLinks=false}}
         {{else}}
             Loading...
         {{/if}}
