@@ -30,7 +30,7 @@ Template.home.onCreated(function () {
         sort: {
             title: 1
         },
-		    debug: true
+        debug: true
     });
 });
 
@@ -50,10 +50,4 @@ Template.home.helpers({
 			console.log('Changing page from ', templateInstance.data.pagination.currentPage(), ' to ', clickedPage);
 		};
 	}
-});
-
-Template.home.events({
-    'click #change': function (event, templateInstance) {
-        templateInstance.pagination.currentPage(Math.round(Math.random() * 10));
-    }
 });
