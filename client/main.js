@@ -25,10 +25,10 @@ Template.main.events({
 Template.home.onCreated(function () {
     this.pagination = new Meteor.Pagination(MyCollection, {
         filters: {
-            idx: {$gt: 9}
+            $text: {$search: 'document'}
         },
         sort: {
-            title: 1
+            score: { $meta: "textScore" }
         },
         debug: true
     });
