@@ -21,7 +21,7 @@
         {{#if isReady}}
             <ul>
               {{#each documents}}
-                  <li>Document #{{_id}}: {{title}}</li>
+                  <li>Document #{{_id}}: {{related_id}}</li>
               {{/each}}
             </ul>
             {{> defaultBootstrapPaginator pagination=templatePagination limit=10}}

@@ -23,7 +23,9 @@ Template.main.events({
 });
 
 Template.home.onCreated(function () {
+	Meteor.subscribe('items.byId', "gZeDzFmYHa9hfYjhY");
     this.pagination = new Meteor.Pagination(MyCollection, {
+		name: 'items.pagination',
         filters: {
             $text: {$search: 'document'}
         },
